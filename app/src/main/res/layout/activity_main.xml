@@ -7,15 +7,17 @@
     tools:context="kong.qingwei.opencv320.MainActivity">
 
     <Button
+        android:id="@+id/detectionButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onDetecting"
-        android:text="目标检测" />
+        android:text="目标检测 (Target Detection)" />
 
     <Button
+        android:id="@+id/trackButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onTracking"
-        android:text="目标跟踪" />
+        android:text="目标跟踪 (Target Tracking)" />
 
 </LinearLayout>

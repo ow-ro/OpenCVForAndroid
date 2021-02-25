@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
+    compileSdkVersion 29
     buildToolsVersion '25.0.2'
 
     defaultConfig {
@@ -26,5 +26,6 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
 
-    compile 'com.github.kongqw:PermissionsManager:1.1.0'
+    implementation 'com.github.kongqw:PermissionsManager:2.1.0'
+
 }

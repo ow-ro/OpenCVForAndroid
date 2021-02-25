@@ -41,12 +41,12 @@ public class ObjectTrackingActivity extends BaseActivity {
         objectTrackingView.setOnOpenCVLoadListener(new OnOpenCVLoadListener() {
             @Override
             public void onOpenCVLoadSuccess() {
-                Toast.makeText(getApplicationContext(), "OpenCV 加载成功", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "OpenCV success load", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onOpenCVLoadFail() {
-                Toast.makeText(getApplicationContext(), "OpenCV 加载失败", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "OpenCV fail load", Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -83,7 +83,7 @@ public class ObjectTrackingActivity extends BaseActivity {
                 ObjectTrackingActivity.this.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Toast.makeText(getApplicationContext(), "目标丢失", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Target lost", Toast.LENGTH_SHORT).show();
                         imageView.setImageBitmap(null);
                     }
                 });

@@ -41,7 +41,7 @@ public class ObjectDetectingActivity extends BaseActivity implements CompoundBut
         objectDetectingView.setOnOpenCVLoadListener(new OnOpenCVLoadListener() {
             @Override
             public void onOpenCVLoadSuccess() {
-                Toast.makeText(getApplicationContext(), "OpenCV 加载成功", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "OpenCV Successfully loaded", Toast.LENGTH_SHORT).show();
                 mFaceDetector = new ObjectDetector(getApplicationContext(), R.raw.lbpcascade_frontalface, 6, 0.2F, 0.2F, new Scalar(255, 0, 0, 255));
                 mEyeDetector = new ObjectDetector(getApplicationContext(), R.raw.haarcascade_eye, 6, 0.1F, 0.1F, new Scalar(0, 255, 0, 255));
                 mUpperBodyDetector = new ObjectDetector(getApplicationContext(), R.raw.haarcascade_upperbody, 3, 0.3F, 0.4F, new Scalar(0, 0, 255, 255));
@@ -53,7 +53,7 @@ public class ObjectDetectingActivity extends BaseActivity implements CompoundBut
 
             @Override
             public void onOpenCVLoadFail() {
-                Toast.makeText(getApplicationContext(), "OpenCV 加载失败", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "OpenCV Failed to load", Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -79,7 +79,7 @@ public class ObjectDetectingActivity extends BaseActivity implements CompoundBut
         switch (buttonView.getId()) {
             case R.id.rb_face:
                 if (isChecked) {
-                    Toast.makeText(getApplicationContext(), "人脸检测", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Face Detection", Toast.LENGTH_SHORT).show();
                     objectDetectingView.addDetector(mFaceDetector);
                 } else {
                     objectDetectingView.removeDetector(mFaceDetector);
@@ -87,7 +87,7 @@ public class ObjectDetectingActivity extends BaseActivity implements CompoundBut
                 break;
             case R.id.rb_eye:
                 if (isChecked) {
-                    Toast.makeText(getApplicationContext(), "眼睛检测", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Eye detection", Toast.LENGTH_SHORT).show();
                     objectDetectingView.addDetector(mEyeDetector);
                 } else {
                     objectDetectingView.removeDetector(mEyeDetector);
@@ -95,7 +95,7 @@ public class ObjectDetectingActivity extends BaseActivity implements CompoundBut
                 break;
             case R.id.rb_upper_body:
                 if (isChecked) {
-                    Toast.makeText(getApplicationContext(), "上半身检测", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Upper body detection", Toast.LENGTH_SHORT).show();
                     objectDetectingView.addDetector(mUpperBodyDetector);
                 } else {
                     objectDetectingView.removeDetector(mUpperBodyDetector);
@@ -103,7 +103,7 @@ public class ObjectDetectingActivity extends BaseActivity implements CompoundBut
                 break;
             case R.id.rb_lower_body:
                 if (isChecked) {
-                    Toast.makeText(getApplicationContext(), "下半身检测", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Lower body detection", Toast.LENGTH_SHORT).show();
                     objectDetectingView.addDetector(mLowerBodyDetector);
                 } else {
                     objectDetectingView.removeDetector(mLowerBodyDetector);
@@ -111,7 +111,7 @@ public class ObjectDetectingActivity extends BaseActivity implements CompoundBut
                 break;
             case R.id.rb_full_body:
                 if (isChecked) {
-                    Toast.makeText(getApplicationContext(), "全身检测", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Whole body detection", Toast.LENGTH_SHORT).show();
                     objectDetectingView.addDetector(mFullBodyDetector);
                 } else {
                     objectDetectingView.removeDetector(mFullBodyDetector);
@@ -119,7 +119,7 @@ public class ObjectDetectingActivity extends BaseActivity implements CompoundBut
                 break;
             case R.id.rb_smile:
                 if (isChecked) {
-                    Toast.makeText(getApplicationContext(), "微笑检测", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Smile detection", Toast.LENGTH_SHORT).show();
                     objectDetectingView.addDetector(mSmileDetector);
                 } else {
                     objectDetectingView.removeDetector(mSmileDetector);
